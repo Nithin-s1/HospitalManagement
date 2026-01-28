@@ -11,10 +11,10 @@ class Validator:
     
     @staticmethod
     def validate_name(name):
-        """Validate name - should contain only letters and spaces"""
+        """Validate name - should contain only letters, spaces, and periods"""
         if not name or len(name.strip()) < 2:
             return False
-        return bool(re.match(r'^[a-zA-Z\s]+$', name))
+        return bool(re.match(r'^[a-zA-Z\s.]+$', name))
     
     @staticmethod
     def validate_age(age):
